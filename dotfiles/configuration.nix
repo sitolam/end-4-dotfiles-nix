@@ -91,7 +91,7 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jawadhc = {
+  users.users.otis = {
     isNormalUser = true;
     description = "Jawad Hameem Chowdhury";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -102,7 +102,7 @@
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "jawadhc";
+  services.xserver.displayManager.autoLogin.user = "otis";
 
   # For BigSaltyFishes End-4 Dotfiles===============
   services.udisks2.enable = true;

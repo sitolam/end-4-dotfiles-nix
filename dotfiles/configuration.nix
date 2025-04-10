@@ -11,7 +11,12 @@
     ];
 
   # Home-manager
-  home-manager.users.otis = ./home-manager/home.nix;
+  home-manager.users.otis = {
+    imports = [
+      ./home-manager/home.nix
+    ];
+  };
+  
   home-manager.extraSpecialArgs.inputs = inputs;
 
   # Bootloader.

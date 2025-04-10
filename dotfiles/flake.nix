@@ -23,18 +23,13 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         system = "x86_64-linux";
-	modules = [ ./configuration.nix ];
+	modules = [ 
+    ./configuration.nix
+    home-manager.nixosModules.home-manager
+  ];
+  specialArgs = { inherit inputs pkgs; };
       };
 
     };
-
-    homeConfigurations = {
-      jawadhc = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home-manager/home.nix ];
-      };
-    };
-
   };
 }

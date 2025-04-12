@@ -27,7 +27,7 @@
     ./configuration.nix
     home-manager.nixosModules.home-manager
   ];
-  specialArgs = { inherit inputs pkgs; };
+  specialArgs = { inherit inputs; };
       };
 
     };

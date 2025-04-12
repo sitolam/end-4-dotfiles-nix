@@ -24,6 +24,8 @@
     enable = true;
     polarity = "dark";
     image = ./non-nix/wallpapers/background.png;
+
+    targets.hyprlock.enable = false;
   };
 
   # Bootloader.

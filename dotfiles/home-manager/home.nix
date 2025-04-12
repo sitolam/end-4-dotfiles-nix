@@ -96,6 +96,7 @@
       xdgPortalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
       # Set NIXOS_OZONE_WL=1
       ozoneWayland.enable = true;
+      # no_hardware_cursors = 1;
     };
     theme = {
       # Customize Cursors,

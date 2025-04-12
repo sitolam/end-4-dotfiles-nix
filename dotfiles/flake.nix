@@ -9,8 +9,10 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
     hyprland-plugins.inputs.hyprland.follows = "hyprland";
-    illogical-impulse.url = "github:bigsaltyfishes/end-4-dots";
+    illogical-impulse.url = "github:sitolam/end-4-dots";
     illogical-impulse.inputs.nixpkgs.follows = "nixpkgs";
+
+    stylix.url = "github:danth/stylix";
 
   };
   outputs = { self, nixpkgs, home-manager, ... } @inputs:
@@ -26,6 +28,7 @@
 	modules = [ 
     ./configuration.nix
     home-manager.nixosModules.home-manager
+    inputs.stylix.nixosModules.stylix
   ];
   specialArgs = { inherit inputs; };
       };

@@ -92,7 +92,7 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.otis = {
+  users.users.${settings.username} = {
     isNormalUser = true;
     description = settings.name;
     extraGroups = [ "networkmanager" "wheel" ];

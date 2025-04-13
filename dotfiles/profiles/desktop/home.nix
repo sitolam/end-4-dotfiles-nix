@@ -119,6 +119,13 @@
     #   ];
     # };
   };
+  wayland.windowManager.hyprland = {
+    settings = {
+      bind = [
+        "Super, L, exec, pidof hyprlock || hyprlock" # Lock
+      ];
+    };
+  };
   
 
 

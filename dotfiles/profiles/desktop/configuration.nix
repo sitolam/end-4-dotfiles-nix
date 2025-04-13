@@ -94,7 +94,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.otis = {
     isNormalUser = true;
-    description = "Otis";
+    description = settings.name;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird

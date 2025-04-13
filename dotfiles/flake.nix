@@ -14,6 +14,9 @@
 
     stylix.url = "github:danth/stylix";
 
+    # Hardware Configuration
+    nixos-hardware.url = "github:nixos/nixos-hardware";
+
   };
   outputs = { self, nixpkgs, home-manager, ... } @inputs:
     let
@@ -24,11 +27,11 @@
     nixosConfigurations = {
       ${settings.hostname} = nixpkgs.lib.nixosSystem {
         system = settings.system;
-	modules = [ 
+	      modules = [ 
           (./. + "/profiles" + ("/" + settings.profile) + "/configuration.nix")          
-    home-manager.nixosModules.home-manager
-    inputs.stylix.nixosModules.stylix
-  ];
+          home-manager.nixosModules.home-manager
+          inputs.stylix.nixosModules.stylix
+        ];
         specialArgs = { 
           inherit inputs;
           inherit settings;

@@ -124,6 +124,11 @@
       bind = [
         "Super, L, exec, pidof hyprlock || hyprlock" # Lock
       ];
+
+      input = {
+        kb_layout = "us";
+        kb_variant = "intl";
+      };
     };
   };
   

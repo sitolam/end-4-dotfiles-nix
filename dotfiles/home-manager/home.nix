@@ -2,20 +2,6 @@
 
 {
 
-  # Stylix
-  stylix = {
-    enable = true;
-    polarity = "dark";
-    image = ./../non-nix/wallpapers/nord.png;
-    opacity = {
-        terminal = 0.6;
-        applications = 0.6;
-        desktop = 0.6;
-    };
-
-    targets.hyprlock.enable = false;
-  };
-
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "otis";
@@ -35,6 +21,7 @@
   nixpkgs.config.allowUnfree = true;
   imports = [
     inputs.illogical-impulse.homeManagerModules.default
+    ../themes/stylix.nix
     # ./shell.nix
   ];
   home.packages = [

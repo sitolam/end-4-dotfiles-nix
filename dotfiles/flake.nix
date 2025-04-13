@@ -27,7 +27,7 @@
       nixos = lib.nixosSystem {
         system = "x86_64-linux";
 	modules = [ 
-    ./configuration.nix
+          (./. + "/profiles" + ("/" + settings.profile) + "/configuration.nix")          
     home-manager.nixosModules.home-manager
     inputs.stylix.nixosModules.stylix
   ];

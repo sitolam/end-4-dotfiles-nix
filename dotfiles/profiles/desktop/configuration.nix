@@ -2,22 +2,24 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, settings, lib, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      
     ];
 
   # Home-manager
-  home-manager.users.otis = {
+  home-manager.users.${settings.username} = {
     imports = [
-      ./home-manager/home.nix
+      ./home.nix
     ];
   };
   
   home-manager.extraSpecialArgs.inputs = inputs;
+  home-manager.extraSpecialArgs.settings = settings;
   home-manager.backupFileExtension = "bak";
 
 
@@ -25,7 +27,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = settings.hostname; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -36,7 +38,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Brussels";
+  time.timeZone = settings.timezone;
 
   i18n.inputMethod = {
     type = "fcitx5";
@@ -48,18 +50,18 @@
   };
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = settings.locale;
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
+    LC_ADDRESS = settings.locale;
+    LC_IDENTIFICATION = settings.locale;
+    LC_MEASUREMENT = settings.locale;
+    LC_MONETARY = settings.locale;
+    LC_NAME = settings.locale;
+    LC_NUMERIC = settings.locale;
+    LC_PAPER = settings.locale;
+    LC_TELEPHONE = settings.locale;
+    LC_TIME = settings.timelocale;
   };
 
   # Enable the X11 windowing system.
@@ -184,9 +186,6 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   programs.hyprland = {
     enable = true;
-  };
-  environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
   };
 
 }

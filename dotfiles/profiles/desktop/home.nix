@@ -1,11 +1,11 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, settings, lib, ... }:
 
 {
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "otis";
-  home.homeDirectory = "/home/otis";
+  home.username = settings.username;
+  home.homeDirectory = "/home/${settings.username}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -21,7 +21,7 @@
   nixpkgs.config.allowUnfree = true;
   imports = [
     inputs.illogical-impulse.homeManagerModules.default
-    ../themes/stylix.nix
+     (import ../../themes/stylix.nix {inherit pkgs config lib settings;})
     # ./shell.nix
   ];
   home.packages = [

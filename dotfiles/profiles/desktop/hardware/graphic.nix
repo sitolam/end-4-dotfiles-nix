@@ -3,6 +3,7 @@
 {
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.open = true;
 
   # hardware.nvidia.package = let
   #   rcu_patch = pkgs.fetchpatch {
@@ -33,7 +34,7 @@
   # Hyprland settings
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1"; # Fix cursor rendering issue on wlr nvidia.
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     # driSupport = true;
     # driSupport32 = true;

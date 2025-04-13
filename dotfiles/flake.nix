@@ -20,6 +20,7 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      settings = import (./. + "/settings.nix") {inherit pkgs;};
     in
   {
     nixosConfigurations = {

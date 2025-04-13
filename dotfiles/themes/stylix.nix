@@ -16,6 +16,13 @@ in {
         desktop = 0.6;
     };
 
+    iconTheme = {
+      enable = true;
+      dark = settings.icons;
+      light = settings.icons;
+      package = settings.iconsPkg;
+    };
+
     targets.hyprlock.enable = false;
     targets.btop.enable =
       lib.mkIf (settings.themeDetails.btopTheme != null) false;

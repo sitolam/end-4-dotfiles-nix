@@ -21,8 +21,8 @@ rec {
     fontPkg = (pkgs.nerd-fonts.fira-code);
     fontSize = 13; # Font size
 
-    icons = "Papirus";
-    iconsPkg = pkgs.papirus-icon-theme;
+    icons = "Adwaita";
+    iconsPkg = pkgs.adwaita-icon-theme;
 
     # Session variables.
     editor = "nvim"; # Default editor

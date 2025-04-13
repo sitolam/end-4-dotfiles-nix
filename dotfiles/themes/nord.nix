@@ -7,8 +7,8 @@
         base05 = "#fffcf0";
     };
 
-    # # Override stylix theme of btop.
-    # btopTheme = "nord";
+    # Override stylix theme of btop.
+    btopTheme = "nord";
 
     # # Hyprland and ags;
     # opacity = 1.0;

@@ -1,6 +1,16 @@
 { config, pkgs, inputs, ... }:
 
 {
+
+  # Stylix
+  stylix = {
+    enable = true;
+    polarity = "dark";
+    image = ./../non-nix/wallpapers/background.png;
+
+    targets.hyprlock.enable = false;
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "otis";

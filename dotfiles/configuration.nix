@@ -19,15 +19,6 @@
   
   home-manager.extraSpecialArgs.inputs = inputs;
 
-  # Stylix
-  stylix = {
-    enable = true;
-    polarity = "dark";
-    image = ./non-nix/wallpapers/background.png;
-
-    targets.hyprlock.enable = false;
-  };
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

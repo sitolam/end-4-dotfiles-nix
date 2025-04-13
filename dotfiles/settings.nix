@@ -6,6 +6,7 @@ rec {
     profile = "desktop"; # Select from profiles directory
     timezone = "Europe/Brussels"; # Select timezone
     locale = "en_US.UTF-8"; # Select locale
+    timelocale = "nl_BE.UTF-8";
     name = "Otis"; # Name (git config)
     email = "otis.lammertyn@gmail.com"; # Email (git config)
     dotfilesDir = "/home/${username}/end-4-dotfiles-nix/dotfiles"; # Absolute path of the local repo

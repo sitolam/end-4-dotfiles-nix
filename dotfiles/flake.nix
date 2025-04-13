@@ -17,21 +17,22 @@
   };
   outputs = { self, nixpkgs, home-manager, ... } @inputs:
     let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = nixpkgs.legacyPackages.${settings.system};
       settings = import (./. + "/settings.nix") {inherit pkgs;};
     in
   {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
-        system = "x86_64-linux";
+      ${settings.hostname} = nixpkgs.lib.nixosSystem {
+        system = settings.system;
 	modules = [ 
           (./. + "/profiles" + ("/" + settings.profile) + "/configuration.nix")          
     home-manager.nixosModules.home-manager
     inputs.stylix.nixosModules.stylix
   ];
-  specialArgs = { inherit inputs; };
+        specialArgs = { 
+          inherit inputs;
+          inherit settings;
+        };
       };
 
     };

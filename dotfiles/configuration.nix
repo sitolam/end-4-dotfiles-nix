@@ -18,6 +18,8 @@
   };
   
   home-manager.extraSpecialArgs.inputs = inputs;
+  home-manager.backupFileExtension = "bak";
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -182,6 +184,9 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   programs.hyprland = {
     enable = true;
+  };
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
   };
 
 }

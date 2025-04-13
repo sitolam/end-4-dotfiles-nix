@@ -43,7 +43,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Asia/Dhaka";
+  time.timeZone = "Europe/Brussels";
 
   i18n.inputMethod = {
     type = "fcitx5";

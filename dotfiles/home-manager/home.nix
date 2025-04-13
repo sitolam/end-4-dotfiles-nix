@@ -6,7 +6,12 @@
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ./../non-nix/wallpapers/background.png;
+    image = ./../non-nix/wallpapers/nord.png;
+    opacity = {
+        terminal = 0.6;
+        applications = 0.6;
+        desktop = 0.6;
+    };
 
     targets.hyprlock.enable = false;
   };

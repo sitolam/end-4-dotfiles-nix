@@ -40,14 +40,6 @@
   # Set your time zone.
   time.timeZone = settings.timezone;
 
-  i18n.inputMethod = {
-    type = "fcitx5";
-    enable = true;
-    fcitx5.addons = with pkgs; [
-      fcitx5-gtk
-      fcitx5-openbangla-keyboard
-    ];
-  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = settings.locale;

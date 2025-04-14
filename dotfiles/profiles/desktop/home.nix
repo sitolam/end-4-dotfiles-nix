@@ -94,8 +94,8 @@
       # Monitor preference
       monitor = [ ",preferred,auto,1" ];
       # Use cusomize hyprland packages
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-      xdgPortalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
+      # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      # xdgPortalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
       # Set NIXOS_OZONE_WL=1
       ozoneWayland.enable = true;
     };

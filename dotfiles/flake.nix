@@ -6,9 +6,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
 
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
-    hyprland-plugins.inputs.hyprland.follows = "hyprland";
     illogical-impulse.url = "github:sitolam/end-4-dots";
     illogical-impulse.inputs.nixpkgs.follows = "nixpkgs";
 

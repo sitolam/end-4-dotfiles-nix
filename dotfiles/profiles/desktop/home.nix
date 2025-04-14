@@ -92,7 +92,7 @@
     enable = true;
     hyprland = {
       # Monitor preference
-      monitor = [ ",preferred,auto,1" ];
+      monitor = settings.monitors;
       # Use cusomize hyprland packages
       # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       # xdgPortalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;

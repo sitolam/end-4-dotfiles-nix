@@ -12,6 +12,10 @@ rec {
     dotfilesDir = "/home/${username}/end-4-dotfiles-nix/dotfiles"; # Absolute path of the local repo
     theme = "nord"; # Selected theme from themes directory (./themes/)
     themeDetails = import (./. + "/themes/${theme}.nix") {dir = dotfilesDir;};
+    monitors = [
+        "DP-3, 1920x1080@60, 0x0, 1"
+        "HDMI-A-1, 1920x1080@60, 1920x0, 1"
+    ]; # Monitor preferences
     wm = ["hyprland"]; # Selected window manager or desktop environment;
                        # must select one in both ./user/wm/ and ./system/wm/
                        # Note, that first WM is included into work profile

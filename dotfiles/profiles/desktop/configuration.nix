@@ -8,8 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./hardware/graphic.nix
-      ./hardware/bluetooth.nix
+      ./../../system/hardware/desktop/graphic.nix
+      ./../../system/hardware/bluetooth.nix
     ];
 
   # Home-manager

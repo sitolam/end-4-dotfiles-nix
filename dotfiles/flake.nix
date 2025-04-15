@@ -14,6 +14,8 @@
     # Hardware Configuration
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
   };
   outputs = { self, nixpkgs, home-manager, ... } @inputs:
     let
@@ -28,6 +30,7 @@
           (./. + "/profiles" + ("/" + settings.profile) + "/configuration.nix")          
           home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
+          inputs.spicetify-nix.nixosModules.default
         ];
         specialArgs = { 
           inherit inputs;

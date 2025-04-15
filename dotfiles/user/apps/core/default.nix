@@ -1,12 +1,15 @@
-{ config, pkgs, ...}:
+{ config, pkgs, inputs, ...}:
 {
+
+  imports = [
+    ./spotify.nix
+  ];
+  
   home.packages = with pkgs; [
 
     # gui
-    spotify
     gimp
     (discord.override {
-      # withOpenASAR = true; # can do this here too
       withVencord = true;
     })
 

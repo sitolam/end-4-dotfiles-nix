@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./hardware/graphic.nix
+      ./hardware/bluetooth.nix
     ];
 
   # Home-manager

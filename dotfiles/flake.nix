@@ -30,7 +30,6 @@
           (./. + "/profiles" + ("/" + settings.profile) + "/configuration.nix")          
           home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
-          inputs.spicetify-nix.nixosModules.default
         ];
         specialArgs = { 
           inherit inputs;

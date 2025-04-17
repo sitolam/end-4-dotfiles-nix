@@ -114,6 +114,11 @@
         kb_layout = "us";
         kb_variant = "intl";
       };
+
+      misc = {
+        vrr = lib.mkForce "0"; # Disable VRR
+        vfr = lib.mkForce "0"; # Disable VFR
+      };
     };
   };
   

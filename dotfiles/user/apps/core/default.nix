@@ -3,6 +3,7 @@
 
   imports = [
     ./spotify.nix
+    ./gparted.nix
   ];
   
   home.packages = with pkgs; [

@@ -26,6 +26,7 @@
     ./../../user/apps/core
     ./../../user/apps/development
     ./../../user/apps/design
+    ./../../user/apps/emulation
     # ./shell.nix
   ];
 

@@ -27,6 +27,7 @@ in {
     targets.btop.enable =
       lib.mkIf (settings.themeDetails.btopTheme != null) false;
     targets.spicetify.enable = false;
+    targets.vscode.enable = false;
   };
 
 }

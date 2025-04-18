@@ -27,6 +27,7 @@ rec {
 
     icons = "Adwaita";
     iconsPkg = pkgs.adwaita-icon-theme;
+    GTK_THEME = "adw-gtk3"; # GTK theme
 
     # Session variables.
     editor = "nvim"; # Default editor

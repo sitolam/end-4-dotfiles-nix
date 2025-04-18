@@ -1,8 +1,8 @@
-{ config, pkgs, ...}:
+{ config, pkgs, settings, ...}:
 
 let
   gparted-fix = pkgs.writeShellScriptBin "gparted-fix" ''
-    pkexec bash -c "ln -s /home/$USER/.themes /root; env GTK_THEME="adw-gtk3" XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR WAYLAND_DISPLAY=$WAYLAND_DISPLAY ${pkgs.gparted}/bin/gparted"
+    pkexec bash -c "ln -s /home/$USER/.themes /root; env GTK_THEME="${settings.GTK_THEME}" XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR WAYLAND_DISPLAY=$WAYLAND_DISPLAY ${pkgs.gparted}/bin/gparted"
     '';
 in
 

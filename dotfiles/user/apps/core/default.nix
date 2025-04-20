@@ -13,6 +13,9 @@
       withVencord = true;
     })
 
+    # gnome
+    gnome-clocks
+
 
     # tools
     btop

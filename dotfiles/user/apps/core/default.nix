@@ -9,7 +9,6 @@
   home.packages = with pkgs; [
 
     # gui
-    gimp
     (discord.override {
       withVencord = true;
     })

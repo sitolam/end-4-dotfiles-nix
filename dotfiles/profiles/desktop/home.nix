@@ -27,6 +27,7 @@
     ./../../user/apps/development
     ./../../user/apps/design
     ./../../user/apps/emulation
+    ./../../user/apps/school
     # ./shell.nix
   ];
 

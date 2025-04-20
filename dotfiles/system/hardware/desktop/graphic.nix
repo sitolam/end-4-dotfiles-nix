@@ -25,10 +25,6 @@
   environment.variables = {
     CUDA_CACHE_PATH = "$XDG_CACHE_HOME/nv";
     NIXOS_OZONE_WL = "1"; # NOTE hint electron apps to use wayland
-    GBM_BACKEND = "nvidia-drm";
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    __GL_VRR_ALLOWED = "0";
   };
   environment.shellAliases = {nvidia-settings = "nvidia-settings --config='$XDG_CONFIG_HOME'/nvidia/settings";};
 

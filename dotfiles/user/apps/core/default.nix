@@ -16,6 +16,7 @@
 
     # tools
     btop
+    mission-center
     bat
     eza
     zip

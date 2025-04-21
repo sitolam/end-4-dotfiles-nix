@@ -342,11 +342,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1744634468,
-        "narHash": "sha256-hwc9gEqX8p6afxHlux6+Kd9slvRIXqyMfe2IMlggjcY=",
+        "lastModified": 1745223710,
+        "narHash": "sha256-F69Tz5mw257Ymdus9xncJKts4wH2FloSMUyPoZaoadk=",
         "owner": "sitolam",
         "repo": "end-4-dots",
-        "rev": "1ee1eaad2093586f08f2a6971d4f659721f67055",
+        "rev": "c26c9ef6be86f641937d6616be79c1f9e28ca31f",
         "type": "github"
       },
       "original": {

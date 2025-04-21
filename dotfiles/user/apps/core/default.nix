@@ -4,6 +4,7 @@
   imports = [
     ./spotify.nix
     ./gparted.nix
+    ./kde-connect.nix
   ];
   
   home.packages = with pkgs; [

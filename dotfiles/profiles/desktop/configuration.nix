@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./../../system/hardware/boot.nix
       ./../../system/hardware/desktop/graphic.nix
       ./../../system/hardware/bluetooth.nix
       ./../../system/hardware/sound.nix

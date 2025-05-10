@@ -25,5 +25,6 @@
     eza
     zip
     unzip
+    qpwgraph
   ];
 }

@@ -28,6 +28,7 @@
     ./../../user/apps/design
     ./../../user/apps/emulation
     ./../../user/apps/school
+    ./../../user/services/syncthing.nix
     # ./shell.nix
   ];
 

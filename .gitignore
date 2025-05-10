@@ -1,1 +1,2 @@
 ./dotfiles/hardware-configuration.nix
+./secrets.nix

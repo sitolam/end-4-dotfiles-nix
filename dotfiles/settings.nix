@@ -1,4 +1,9 @@
 {pkgs, ...}:
+
+let
+  secrets = import ./secrets.nix { inherit pkgs; };
+in
+
 rec {
     system = "x86_64-linux";
     hostname = "nixos"; # Hostname
@@ -36,4 +41,7 @@ rec {
     browserPkg = pkgs.qutebrowser;
     term = "kitty"; # Default terminal command
     termPkg = pkgs.kitty;
+
+    # Syncthing ID
+    syncthing_ID = secrets.syncthing_ID; # Set this in secrets.nix
 }

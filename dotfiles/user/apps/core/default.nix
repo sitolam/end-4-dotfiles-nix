@@ -19,6 +19,7 @@
 
 
     # tools
+    wget
     btop
     mission-center
     bat

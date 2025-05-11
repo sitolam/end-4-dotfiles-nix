@@ -14,6 +14,7 @@
       ./../../system/hardware/bluetooth.nix
       ./../../system/hardware/sound.nix
       ./../../system/virtualization/virt-manager.nix
+      ./../../system/apps/core
     ];
 
   # Home-manager

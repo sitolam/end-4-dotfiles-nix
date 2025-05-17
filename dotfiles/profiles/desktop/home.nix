@@ -29,6 +29,7 @@
     ./../../user/apps/emulation
     ./../../user/apps/school
     ./../../user/services/syncthing.nix
+    ./../../user/services/rclone
     # ./shell.nix
   ];
 

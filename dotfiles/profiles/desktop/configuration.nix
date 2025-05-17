@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, settings, lib, ... }:
+{ config, pkgs, inputs, settings, lib, winapps, ... }:
 
 {
   imports =
@@ -14,6 +14,7 @@
       ./../../system/hardware/bluetooth.nix
       ./../../system/hardware/sound.nix
       ./../../system/virtualization/virt-manager.nix
+      ./../../system/virtualization/winapps
       ./../../system/apps/core
     ];
 

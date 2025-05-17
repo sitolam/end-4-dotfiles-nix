@@ -16,8 +16,13 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    winapps = {
+      url = "github:winapps-org/winapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
-  outputs = { self, nixpkgs, home-manager, ... } @inputs:
+  outputs = { self, nixpkgs, home-manager, winapps, ... } @inputs:
     let
       pkgs = nixpkgs.legacyPackages.${settings.system};
       settings = import (./. + "/settings.nix") {inherit pkgs;};
@@ -34,6 +39,7 @@
         specialArgs = { 
           inherit inputs;
           inherit settings;
+          inherit winapps;
         };
       };
 

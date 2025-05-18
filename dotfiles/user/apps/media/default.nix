@@ -11,5 +11,12 @@
     inkscape
     kdePackages.kdenlive
 
+    # Video
+    mpv
+    vlc
+    clapper
+
+    handbrake
+
   ];
 }

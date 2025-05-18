@@ -9,7 +9,7 @@
 
     gimp
     inkscape
-    davinci-resolve
+    kdePackages.kdenlive
 
   ];
 }

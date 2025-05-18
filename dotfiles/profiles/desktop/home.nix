@@ -25,7 +25,7 @@
     (import ../../themes/stylix.nix {inherit pkgs config lib settings;})
     ./../../user/apps/core
     ./../../user/apps/development
-    ./../../user/apps/create
+    ./../../user/apps/media
     ./../../user/apps/emulation
     ./../../user/apps/school
     ./../../user/services/syncthing.nix

@@ -16,7 +16,7 @@
       ./../../system/virtualization/virt-manager.nix
       ./../../system/virtualization/winapps
       ./../../system/apps/core
-      ./../../system/apps/create
+      ./../../system/apps/media
     ];
 
   # Home-manager

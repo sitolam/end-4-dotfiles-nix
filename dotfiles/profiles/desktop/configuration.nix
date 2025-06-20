@@ -95,6 +95,7 @@
 
   # For BigSaltyFishes End-4 Dotfiles===============
   services.udisks2.enable = true;
+  services.gvfs.enable = true;
   # ================================================
 
   # Install firefox.

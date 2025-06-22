@@ -17,6 +17,8 @@
       ./../../system/virtualization/winapps
       ./../../system/apps/core
       ./../../system/apps/media
+      ./../../system/apps/gaming
+
     ];
 
   # Home-manager

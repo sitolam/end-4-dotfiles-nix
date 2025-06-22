@@ -35,6 +35,11 @@
   hardware.nvidia.package =  config.boot.kernelPackages.nvidiaPackages.stable;
   hardware.nvidia.powerManagement.enable = true; # FIXME does this solve the problem with suspend, what does this excatly do?
 
+  # OpenGL
+  hardware.opengl = {
+    enable = true;
+  };
+
   # Hyprland settings
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1"; # Fix cursor rendering issue on wlr nvidia.
 

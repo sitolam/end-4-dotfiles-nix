@@ -27,5 +27,6 @@
     zip
     unzip
     qpwgraph
+    udiskie
   ];
 }

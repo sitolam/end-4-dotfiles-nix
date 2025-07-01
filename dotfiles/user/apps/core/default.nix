@@ -27,6 +27,7 @@
     zip
     unzip
     unp
+    ncdu
     qpwgraph
     udiskie
   ];

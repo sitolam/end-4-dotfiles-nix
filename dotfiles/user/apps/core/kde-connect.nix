@@ -3,7 +3,14 @@
 
   services.kdeconnect = {
     enable = true;
-    indicator = true;
+  };
+
+  wayland.windowManager.hyprland = {
+    settings = {
+      "exec-once" = [
+        "kdeconnectd"
+      ];
+    };
   };
 
 }

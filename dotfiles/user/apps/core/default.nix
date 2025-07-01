@@ -8,11 +8,6 @@
   
   home.packages = with pkgs; [
 
-    # gui
-    (discord.override {
-      withVencord = true;
-    })
-
     # gnome
     gnome-clocks
 

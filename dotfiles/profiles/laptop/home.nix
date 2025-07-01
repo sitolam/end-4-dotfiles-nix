@@ -30,6 +30,7 @@
     ./../../user/apps/school
     ./../../user/services/syncthing.nix
     ./../../user/services/rclone
+    ./../../user/apps/social
     # ./shell.nix
   ];
 

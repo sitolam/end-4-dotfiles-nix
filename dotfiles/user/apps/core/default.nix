@@ -29,6 +29,7 @@
     unp
     ncdu
     qpwgraph
+    nwg-displays
     udiskie
   ];
 }

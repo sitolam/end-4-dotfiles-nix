@@ -2,7 +2,6 @@
 {
 
   imports = [
-    ./spotify.nix
     ./gparted.nix
     ./kde-connect.nix
   ];

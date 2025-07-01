@@ -12,6 +12,7 @@
     })
     signal-desktop
     element-desktop
+    telegram-desktop
   ];
 
   wayland.windowManager.hyprland = {

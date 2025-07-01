@@ -26,6 +26,7 @@
     eza
     zip
     unzip
+    unp
     qpwgraph
     udiskie
   ];

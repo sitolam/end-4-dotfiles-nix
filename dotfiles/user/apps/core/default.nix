@@ -31,5 +31,6 @@
     qpwgraph
     nwg-displays
     udiskie
+    ntfs3g
   ];
 }

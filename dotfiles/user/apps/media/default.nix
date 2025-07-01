@@ -19,5 +19,7 @@
 
     handbrake
 
+    cava # Audio visualizer
+
   ];
 }

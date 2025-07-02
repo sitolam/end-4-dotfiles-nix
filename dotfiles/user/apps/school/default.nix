@@ -2,7 +2,7 @@
 {
 
   imports = [
-
+    ./antimicrox
   ];
 
     home.packages = with pkgs; [

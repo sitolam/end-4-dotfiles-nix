@@ -16,6 +16,7 @@
     mpv
     vlc
     clapper
+    losslesscut-bin
 
     handbrake
 

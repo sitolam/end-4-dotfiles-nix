@@ -2,7 +2,7 @@
 {
 
   imports = [
-
+    ./gpu-screen-recorder.nix
   ];
 
 

@@ -2,6 +2,8 @@
   description = "My Flake File";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -26,7 +28,7 @@
     };
 
   };
-  outputs = { self, nixpkgs, home-manager, winapps, ... } @inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, winapps, ... } @inputs:
     let
       pkgs = nixpkgs.legacyPackages.${settings.system};
       settings = import (./. + "/settings.nix") {inherit pkgs;};
@@ -44,6 +46,7 @@
           inherit inputs;
           inherit settings;
           inherit winapps;
+          unstable = nixpkgs-unstable.legacyPackages.${settings.system}; 
         };
       };
 

@@ -9,6 +9,7 @@
 
     zotero
     anki
+    onlyoffice-desktopeditors
 
   ];
 }

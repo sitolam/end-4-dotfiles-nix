@@ -18,6 +18,9 @@
     clapper
     losslesscut-bin
 
+    # Image
+    loupe
+
     handbrake
 
     cava # Audio visualizer

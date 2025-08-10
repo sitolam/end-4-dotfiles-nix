@@ -2,11 +2,12 @@
 
 let
   toggle-kanata = pkgs.writeShellScriptBin "toggle-kanata" ''
-    if sudo systemctl is-active --quiet kanata-default.service; then
-      sudo systemctl stop kanata-default.service
+    # Check the status of the kanata-default.service
+    if systemctl is-active --quiet kanata-default.service; then
+      systemctl stop kanata-default.service
       notify-send -a 't1' -i "dialog-information" "Kanata off"
     else
-      sudo systemctl start kanata-default.service
+      systemctl start kanata-default.service
       notify-send -a 't1' -i "dialog-information" "Kanata on"
     fi
   '';

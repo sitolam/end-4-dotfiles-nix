@@ -1,4 +1,17 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, settings, ... }:
+
+let
+  toggle-kanata = pkgs.writeShellScriptBin "toggle-kanata" ''
+    if sudo systemctl is-active --quiet kanata-default.service; then
+      sudo systemctl stop kanata-default.service
+      notify-send -a 't1' -i "dialog-information" "Kanata off"
+    else
+      sudo systemctl start kanata-default.service
+      notify-send -a 't1' -i "dialog-information" "Kanata on"
+    fi
+  '';
+in
+
 {
 
   # Enable the uinput module
@@ -40,5 +53,9 @@
           config = builtins.readFile ./config.kbd;
         };
       };
-    };  
+    };
+
+  home-manager.users.${settings.username}.home.packages = with pkgs; [
+    toggle-kanata
+  ];
 }

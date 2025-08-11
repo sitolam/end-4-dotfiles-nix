@@ -112,10 +112,6 @@
   };
   wayland.windowManager.hyprland = {
     settings = {
-      bind = [
-        "Super, L, exec, pidof hyprlock || hyprlock" # Lock
-        ", code:76, exec, killall -SIGUSR1 gpu-screen-recorder" # Make a replay
-      ];
 
       input = {
         kb_layout = "us";

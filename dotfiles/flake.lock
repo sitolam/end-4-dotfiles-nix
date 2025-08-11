@@ -33,11 +33,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1743762088,
-        "narHash": "sha256-f+oXT9b3xuBDmm4v4nDqJvlHabxxZRB6+pay4Ub/NvA=",
+        "lastModified": 1748365336,
+        "narHash": "sha256-pg0w4uOZI32dLASD6UbBezeQg5PwOa0GLv7rTwn3VxY=",
         "owner": "Kirottu",
         "repo": "anyrun",
-        "rev": "786f539d69d5abcefa68978dbaa964ac14536a00",
+        "rev": "25367153f225a59c5ce5746583e39a71ff052f09",
         "type": "github"
       },
       "original": {
@@ -331,11 +331,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1747556213,
-        "narHash": "sha256-tyyahVGw9HvzNX4QzEKreAGENKU0CF1/cu8M7bcZv8s=",
+        "lastModified": 1754839869,
+        "narHash": "sha256-qEh4Za9Xlccy+R3Dzr90PnB0my8df0OVCIPv9xvSsyY=",
         "owner": "sitolam",
         "repo": "end-4-dots",
-        "rev": "56b7b58bed4acea806da6228c16c9729c9562852",
+        "rev": "b9bdbec8352986d51ba2771ba052c5984c33915f",
         "type": "github"
       },
       "original": {

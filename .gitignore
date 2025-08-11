@@ -1,4 +1,4 @@
-./dotfiles/profiles/desktop/hardware-configuration.nix
-./dotfiles/profiles/laptop/hardware-configuration.nix
-./dotfiles/secrets.nix
-./dotfiles/settings.nix
+dotfiles/profiles/desktop/hardware-configuration.nix
+dotfiles/profiles/laptop/hardware-configuration.nix
+dotfiles/secrets.nix
+dotfiles/settings.nix

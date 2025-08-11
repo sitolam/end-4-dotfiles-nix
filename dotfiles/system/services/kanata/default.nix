@@ -5,10 +5,18 @@ let
     # Check the status of the kanata-default.service
     if systemctl is-active --quiet kanata-default.service; then
       systemctl stop kanata-default.service
-      notify-send -a 't1' -i "dialog-information" "Kanata off"
+      if [ $? -ne 0 ]; then
+        notify-send "Error" "Failed to turn Kanata off."
+      else
+          notify-send "Success" "Kanata off"
+      fi
     else
       systemctl start kanata-default.service
-      notify-send -a 't1' -i "dialog-information" "Kanata on"
+      if [ $? -ne 0 ]; then
+        notify-send "Error" "Failed to turn Kanata on."
+      else
+          notify-send "Success" "Kanata on"
+      fi
     fi
   '';
 in

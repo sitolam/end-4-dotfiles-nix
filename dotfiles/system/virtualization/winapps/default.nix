@@ -2,13 +2,21 @@
 
 let
   toggle-windows = pkgs.writeShellScriptBin "toggle-windows" ''
-    # Check the status of the kanata-default.service
-    if systemctl is-active --quiet docker-compose-winapps-root.target; then
-      systemctl stop docker-compose-winapps-root.target
-      notify-send -a 't1' -i "dialog-information" "Windows off"
+    # Check the status of the docker-WinApps.service
+    if systemctl is-active --quiet docker-WinApps.service; then
+      systemctl stop docker-WinApps.service
+      if [ $? -ne 0 ]; then
+        notify-send "Error" "Failed to turn Windows off."
+      else
+          notify-send "Success" "Windows off"
+      fi
     else
-      systemctl start docker-compose-winapps-root.target
-      notify-send -a 't1' -i "dialog-information" "Windows on"
+      systemctl start docker-WinApps.service
+      if [ $? -ne 0 ]; then
+        notify-send "Error" "Failed to turn Windows on."
+      else
+          notify-send "Success" "Windows on"
+      fi
     fi
   '';
 in

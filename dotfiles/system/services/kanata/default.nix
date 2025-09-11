@@ -47,7 +47,7 @@ in
 
   # Enable Kanata service
   services.kanata = {
-      enable = true;
+      enable = false;
       keyboards = {
         # NOTE name keyboard (see options: https://mynixos.com/nixpkgs/options/services.kanata.keyboards.%3Cname%3E)
         default = {

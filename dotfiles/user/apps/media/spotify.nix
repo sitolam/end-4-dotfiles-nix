@@ -46,7 +46,18 @@ in
 
     enabledExtensions = with spicePkgs.extensions; [
       shuffle # shuffle+ (special characters are sanitized out of extension names)
+      groupSession # Allows you to create a link to share with your friends to listen along with you.
+      powerBar # Spotlight-like search bar for spotify.
+      songStats # Show a song's stats, like dancability, tempo, and key.
+      history # Adds a page that shows your listening history.
     ];
+
+    enabledCustomApps = with spicePkgs.apps; [
+      marketplace # Add a page where you can browse extensions, themes, apps, and snippets. Using the marketplace does not work with this flake, however it is still here in order to allow for browsing.
+      localFiles # Add a shortcut to see just your local files.
+      lyricsPlus # Add a page with pretty scrolling lyrics.
+    ];
+
     theme = spicePkgs.themes.sleek;
       colorScheme = "custom";
       customColorScheme = {

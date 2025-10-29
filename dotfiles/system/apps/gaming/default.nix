@@ -4,6 +4,12 @@
   imports = [
     ./gpu-screen-recorder.nix
   ];
+  
+  home-manager.users.${settings.username} = {
+    imports = [
+      ./modrinth.nix
+    ];
+  };
 
 
   programs.steam.enable = true; # Enable Steam

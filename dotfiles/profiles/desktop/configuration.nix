@@ -26,6 +26,7 @@
   home-manager.users.${settings.username} = {
     imports = [
       ./home.nix
+      inputs.zen-browser.homeModules.beta
     ];
   };
   

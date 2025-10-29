@@ -4,6 +4,7 @@
   imports = [
     ./gparted.nix
     ./kde-connect.nix
+    ./zen.nix
   ];
   
   home.packages = with pkgs; [

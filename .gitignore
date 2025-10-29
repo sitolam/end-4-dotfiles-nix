@@ -1,2 +1,4 @@
 ./dotfiles/hardware-configuration.nix
 ./secrets.nix
+secrets.nix
+settings.nix

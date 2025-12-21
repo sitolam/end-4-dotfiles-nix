@@ -1,4 +1,4 @@
-{ config, pkgs, settings, ...}:
+{ config, pkgs, settings, unstable, ...}:
 {
 
   imports = [
@@ -24,6 +24,7 @@
   environment.systemPackages = with pkgs; [
 
     prismlauncher
+    unstable.noriskclient-launcher
     lutris
     heroic
     mangohud

@@ -22,7 +22,7 @@
   imports = [
     inputs.illogical-impulse.homeManagerModules.default
     inputs.spicetify-nix.homeManagerModules.default
-    (import ../../themes/stylix.nix {inherit pkgs config lib settings;})
+    (import ../../themes/stylix.nix {inherit inputs pkgs config lib settings;})
     ./../../user/apps/core
     ./../../user/apps/development
     ./../../user/apps/media

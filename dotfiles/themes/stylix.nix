@@ -1,6 +1,10 @@
-{ pkgs, lib, settings, config, ... }: let
+{ inputs, pkgs, lib, settings, config, ... }: let
   details = settings.themeDetails;
 in {
+
+  imports = [
+    inputs.stylix.homeModules.stylix
+  ];
 
   # Stylix
   stylix = {

@@ -18,7 +18,8 @@
       ./../../system/apps/core
       ./../../system/apps/media
       ./../../system/apps/gaming
-      ./../../system/services/kanata
+      ./../../system/services
+      ./../../system/apps/android
 
     ];
 

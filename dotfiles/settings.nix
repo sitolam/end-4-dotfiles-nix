@@ -5,22 +5,16 @@ let
 in
 
 rec {
-    system = "x86_64-linux";
     hostname = "nixos"; # Hostname
-    username = "username"; # Username
-    profile = "desktop"; # Select from profiles directory
+    username = "otis"; # Username
     timezone = "Europe/Brussels"; # Select timezone
     locale = "en_US.UTF-8"; # Select locale
     timelocale = "nl_BE.UTF-8";
-    name = "name"; # Name (git config)
-    email = "email"; # Email (git config)
+    name = "Otis"; # Name (git config)
+    email = "otis.lammertyn@gmail.com"; # Email (git config)
     dotfilesDir = "/home/${username}/end-4-dotfiles-nix/dotfiles"; # Absolute path of the local repo
     theme = "nord"; # Selected theme from themes directory (./themes/)
     themeDetails = import (./. + "/themes/${theme}.nix") {dir = dotfilesDir;};
-    monitors = [
-        "DP-3, 1920x1080@60, 0x0, 1"
-        "HDMI-A-1, 1920x1080@60, 1920x0, 1"
-    ]; # Monitor preferences
 
 
     icons = "Adwaita";
